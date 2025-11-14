@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #0d1723;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    color: #89d6ff;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+.header .logo img:hover {
+    transform: scale(1.07);
+}
+
+.header nav {
+    list-style: none;
+}
+
+.header nav li {
+    display: inline-block;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+.header nav li:hover {
+    transform: scale(1.1);
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 700;
+    color: #89d6ff;
+}
+
+.carrito {
+    color: #89d6ff;
+}
+
+.ingreso {
+    transition: 0.3s;
+}
+
+.ingreso .registrar {
+    color: #89d6ff;
+}
+
+.ingreso:hover {
+    transform: scale(1.1);
+}
+
+.header .ingreso button {
+    font-weight: 700;
+    padding: 9px 25px;
+    color: #89d6ff;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .ingreso button:hover {
+    background-color: #ffffff;
+    transform: scale(1);
+}
+/*--- FIN HEADER ---*/
+
+/*--- MAIN ---*/
+
+main.nosotros {
+    padding: 40px 10%;
+    background-color: #f7f7f7;
+}
+
+main.nosotros h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0d1723;
+}
+
+main.nosotros p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+main.nosotros ul.tecnologias,
+main.nosotros ul.desarrolladores {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+main.nosotros ul.tecnologias li,
+main.nosotros ul.desarrolladores li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+main.nosotros ul.tecnologias li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+main.nosotros ul.desarrolladores li a {
+    color: #0d1723;
+    text-decoration: none;
+}
+
+main.nosotros ul.desarrolladores li a:hover {
+    text-decoration: underline;
+}
+
+/* Media query para pantallas de 768px o menos (tablets y móviles en modo horizontal) */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+        /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 5%;
+    }
+
+    .header .logo img {
+        height: 50px;
+    }
+
+    .header nav li {
+        padding: 0 10px;
+    }
+
+    .header a {
+        font-size: 1rem;
+        /* Ajusta el tamaño de fuente para los enlaces */
+    }
+
+    main.nosotros {
+        padding: 20px 5%;
+    }
+
+    main.nosotros h1 {
+        font-size: 2rem;
+    }
+
+    main.nosotros p {
+        font-size: 1rem;
+        /* Ajusta el tamaño de fuente del párrafo */
+    }
+
+    main.nosotros ul.tecnologias li img,
+    main.nosotros ul.desarrolladores li img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Media query para pantallas de 480px o menos (móviles en modo vertical) */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+        /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    header {
+        padding: 10px 2%;
+    }
+
+    .header .logo img {
+        height: 40px;
+    }
+
+    .header nav li {
+        padding: 0 5px;
+    }
+
+    .header a {
+        font-size: 0.875rem;
+        /* Ajusta el tamaño de fuente para los enlaces */
+    }
+
+    main.nosotros {
+        padding: 15px 2%;
+    }
+
+    main.nosotros h1 {
+        font-size: 1.5rem;
+    }
+
+    main.nosotros p {
+        font-size: 0.875rem;
+        /* Ajusta el tamaño de fuente del párrafo */
+    }
+
+    main.nosotros ul.tecnologias li img,
+    main.nosotros ul.desarrolladores li img {
+        width: 20px;
+        height: 20px;
+    }
+}

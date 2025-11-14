@@ -1,0 +1,288 @@
+/* Estilos globales para el NAV */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+header {
+    background-color: #0d1723;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    padding: 5px 10%;
+    color: #89d6ff;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+.header .logo img:hover {
+    transform: scale(1.07);
+}
+
+.header nav {
+    list-style: none;
+}
+
+.header nav li {
+    display: inline-block;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+.header nav li:hover {
+    transform: scale(1.1);
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 700;
+    color: #89d6ff;
+}
+
+.carrito {
+    color: #89d6ff;
+}
+
+.ingreso {
+    transition: 0.3s;
+}
+
+.ingreso .registrar {
+    color: #89d6ff;
+}
+
+.ingreso:hover {
+    transform: scale(1.1);
+}
+
+.header .ingreso button {
+    font-weight: 700;
+    padding: 9px 25px;
+    color: #89d6ff;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .ingreso button:hover {
+    background-color: #ffffff;
+    transform: scale(1);
+}
+
+/* Estilos para el main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100vh - 4.5rem);
+    /* Ajustamos la altura restando la altura del header */
+    width: 100%;
+    overflow-y: auto;
+}
+
+.carrito-contenedor {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 50rem;
+    width: 80%;
+    margin-top: 2rem;
+}
+
+.producto-contenido {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.producto-contenido h2 {
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+.producto-contenido p {
+    margin: 0.2rem 0;
+    color: #666;
+}
+
+.btn-eliminar {
+    background-color: #e63946;
+    color: #ffffff;
+    border: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    text-decoration: none;
+}
+.btn-eliminar .eliminar{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-eliminar:hover {
+    background-color: #d62839;
+}
+
+.carrito-total {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.carrito-total p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+.btn-compra {
+    background-color: #38b000;
+    color: #ffffff;
+    border: none;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-compra:hover {
+    background-color: #32a600;
+}
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    * {
+        font-size: 1rem;
+        /* Ajusta el tamaño de fuente para móviles */
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem 2%;
+    }
+
+    .header .logo img {
+        height: 3.125rem;
+    }
+
+    .header nav li {
+        display: block;
+        padding: 0.625rem 0;
+    }
+
+    .carrito-contenedor {
+        padding: 1rem;
+        max-width: 100%;
+        width: 95%;
+    }
+
+    .producto-contenido {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-eliminar,
+    .btn-compra {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 481px) and (max-width: 768px) {
+    * {
+        font-size: 1.125rem;
+        /* Ajusta el tamaño de fuente para tabletas */
+    }
+
+    header {
+        padding: 0.5rem 5%;
+    }
+
+    .header nav li {
+        padding: 0.75rem 1.875rem;
+    }
+
+    .carrito-contenedor {
+        padding: 1.5rem;
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .producto-contenido {
+        padding: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .btn-eliminar,
+    .btn-compra {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 769px) {
+    * {
+        font-size: 1.25rem;
+        /* Ajusta el tamaño de fuente para pantallas grandes */
+    }
+
+    header {
+        padding: 0.5rem 10%;
+    }
+
+    .header nav li {
+        padding: 0 2rem;
+    }
+
+    .carrito-contenedor {
+        padding: 2rem;
+        max-width: 50rem;
+        width: 80%;
+    }
+
+    .producto-contenido {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-eliminar,
+    .btn-compra {
+        font-size: 1.125rem;
+        padding: 0.7rem 1.5rem;
+    }
+}

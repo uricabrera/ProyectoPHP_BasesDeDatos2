@@ -1,0 +1,275 @@
+/*--- Estilos para el NAV ---*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #0d1723;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    color: #89d6ff;
+}
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+.header .logo img:hover {
+    transform: scale(1.07);
+}
+.header nav {
+    list-style: none;
+}
+
+.header nav li{
+    display: inline-block;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+.header nav li:hover {
+    transform: scale(1.1);
+}
+.header a {
+    text-decoration: none;
+    font-size: 700;
+    color: #89d6ff;
+}
+
+.carrito{
+    color: #89d6ff;
+}
+.ingreso {
+    transition: 0.3s;
+}
+.ingreso .registrar{
+    color: #89d6ff;
+}
+.ingreso:hover{
+    transform: scale(1.1);
+}
+.header .ingreso button{
+    font-weight: 700;
+    padding: 9px 25px;
+    color: #89d6ff;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .ingreso button:hover{
+    background-color: #ffffff;
+    transform: scale(1);
+}
+/*-- FIN estilos NAV --*/
+
+
+/*----Colores pag----*/
+.color1 {
+    color: #89d6ff;
+}
+
+.color2 {
+    color: #d5fdff;
+}
+
+.color3 {
+    color: #0f1b36;
+}
+
+.color4 {
+    color: #76777c;
+}
+
+.color5 {
+    color: #e2e2e2;
+}
+/*-----Seccion Nosotros-----*/
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra horizontalmente */
+    text-align: center;
+    /* Centra el texto dentro del contenedor */
+}
+.nosotros h2{
+    text-align: center;
+    margin: 10px 0 10px;
+}
+.nosotros p {
+    max-width: 600px;
+    /* Limita la anchura máxima del párrafo */
+    margin: 0 auto;
+    /* Centra el párrafo horizontalmente */
+}
+
+/*-----Seccion Productos-----*/
+
+
+/* Estilos para la sección de productos */
+.remeras{
+    margin-top: 50px;
+}
+.remeras h2{
+    text-align: center;
+    margin: 30px 0 20px;
+}
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    gap: 20px;
+    /* Espacio entre las imágenes */
+}
+
+.columna {
+    max-width: 1200px;
+    /* Máximo ancho de la columna */
+    margin: 0 auto;
+    /* Centra la columna en el contenedor */
+}
+
+.columna img {
+    margin: 10px;
+    width: 100%;
+    /* Las imágenes ocupan todo el ancho de su contenedor */
+    height: auto;
+    /* La altura se ajusta automáticamente */
+    max-width: 250px;
+    /* Máximo ancho de las imágenes */
+    /* Borde de 2 píxeles sólido en color gris claro (#ccc) */
+    border-radius: 5px;
+    /* Borde redondeado de 5 píxeles */
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.8);
+}
+.productos2 {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    gap: 20px;
+    /* Espacio entre las imágenes */
+}
+
+/*-----Seccion Footer-----*/
+
+footer .container-footer {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: end;
+}
+footer .container-footer p{
+    font-size: 18px;
+}
+footer .container-footer a{
+    font-size: 18px;
+}
+
+/* Media query para pantallas de 768px o menos (tablets y móviles en modo horizontal) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .header .logo img {
+        height: 50px;
+    }
+
+    .header nav {
+        display: block;
+        width: 100%;
+    }
+
+    .header nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .header nav li {
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+    .header .ingreso button {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .productos,
+    .productos2 {
+        flex-direction: column;
+    }
+
+    .columna img {
+        max-width: 100%;
+    }
+}
+
+/* Media query para pantallas de 480px o menos (móviles en modo vertical) */
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+        height: auto;
+    }
+
+    .header .logo img {
+        height: 40px;
+    }
+
+    .header nav ul {
+        padding: 0;
+    }
+
+    .header nav li {
+        padding: 0.25rem 0;
+    }
+
+    .header .ingreso button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .nosotros p {
+        font-size: 0.875rem;
+    }
+
+    .remeras h2 {
+        font-size: 1.25rem;
+    }
+
+    .columna img {
+        max-width: 100%;
+        border-radius: 0.25rem;
+    }
+
+    .footer .container-footer p,
+    .footer .container-footer a {
+        font-size: 1rem;
+    }
+}

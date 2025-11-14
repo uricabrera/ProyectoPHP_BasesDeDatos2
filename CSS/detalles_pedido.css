@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #0d1723;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 85px;
+}
+
+.header .logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header .logo img:hover {
+    transform: scale(1.05);
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin: 0 1rem;
+}
+
+.header nav a {
+    color: #89d6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+.header .ingreso {
+    display: flex;
+    align-items: center;
+}
+
+.header .ingreso button {
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    color: #0d1723;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header .ingreso button:hover {
+    background: #fff;
+}
+
+main.contenido_detalles {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0d1723;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #0d1723;
+}
+
+.tabla_detalles {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.tabla_detalles thead {
+    background-color: #0d1723;
+    color: #fff;
+}
+
+.tabla_detalles th,
+.tabla_detalles td {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla_detalles th {
+    font-size: 1.1rem;
+}
+
+.tabla_detalles td {
+    font-size: 1rem;
+}
+
+.tabla_detalles tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla_detalles tr:hover {
+    background-color: #f0f0f0;
+}
+
+.mensaje_exito {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #4caf50;
+    margin-top: 2rem;
+}
+
+.boton_volver {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0d1723;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton_volver:hover {
+    background-color: #0a0f1e;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem;
+        /* Ajusta el tamaño de fuente para móviles */
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .header .logo img {
+        height: 4rem;
+    }
+
+    .header nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .header .ingreso button {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    main.contenido_detalles {
+        padding: 1.5rem;
+        margin: 1rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin-top: 0.75rem;
+    }
+
+    .tabla_detalles th,
+    .tabla_detalles td {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+
+    .mensaje_exito {
+        font-size: 1rem;
+    }
+
+    .boton_volver {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 1rem;
+        /* Ajusta el tamaño de fuente para tabletas */
+    }
+
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    .header .logo img {
+        height: 4.5rem;
+    }
+
+    .header nav ul {
+        flex-direction: row;
+    }
+
+    .header nav ul li {
+        margin: 0 0.75rem;
+    }
+
+    .header .ingreso button {
+        padding: 0.5rem 1rem;
+    }
+
+    main.contenido_detalles {
+        padding: 1.875rem;
+        margin: 1.5rem auto;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.375rem;
+    }
+
+    .tabla_detalles th,
+    .tabla_detalles td {
+        font-size: 0.9375rem;
+    }
+
+    .mensaje_exito {
+        font-size: 1.125rem;
+    }
+
+    .boton_volver {
+        padding: 0.625rem 1.25rem;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 769px) {
+    body {
+        font-size: 1.125rem;
+        /* Ajusta el tamaño de fuente para pantallas grandes */
+    }
+
+    header {
+        padding: 1rem 2rem;
+        height: 5.3125rem;
+    }
+
+    .header .logo img {
+        height: 6rem;
+    }
+
+    .header nav ul {
+        flex-direction: row;
+    }
+
+    .header nav ul li {
+        margin: 0 1rem;
+    }
+
+    .header .ingreso button {
+        padding: 0.5rem 1rem;
+    }
+
+    main.contenido_detalles {
+        padding: 2rem;
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .tabla_detalles th,
+    .tabla_detalles td {
+        font-size: 1rem;
+    }
+
+    .mensaje_exito {
+        font-size: 1.2rem;
+    }
+
+    .boton_volver {
+        padding: 0.75rem 1.5rem;
+    }
+}

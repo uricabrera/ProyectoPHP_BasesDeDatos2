@@ -1,0 +1,173 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dbeaff;
+    /* Fondo celeste claro */
+    font-family: Arial, sans-serif;
+    color: #fff;
+    /* Color blanco para el texto */
+}
+a{
+    text-decoration: none;
+}
+
+/* Estilos para el header */
+.header-inicio {
+    background-color: #0d1723;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centrar verticalmente */
+    height: 70px;
+}
+
+.header-inicio img {
+    height: 60px;
+    /* Ajusta el tamaño del logo */
+    width: auto;
+}
+
+/* Estilos para el formulario de ingreso */
+.ingreso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Espacio superior */
+    margin: 45px auto;
+
+    background-color: #fff;
+    /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    /* Ancho del formulario */
+    max-width: 400px;
+    /* Máximo ancho */
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+    /* Sombra suave */
+}
+
+.ingreso h1 {
+    color: #0d1722;
+    /* Color azul oscuro para el título */
+    text-align: center;
+    margin-bottom: 20px;
+    /* Espacio inferior */
+}
+.ingreso label{
+    color: #0d1722;
+}
+.ingreso label,
+.ingreso input[type="text"],
+.ingreso input[type="password"],
+.ingreso input[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px;
+    /* Espacio inferior */
+}
+
+.ingreso input[type="submit"],
+.ingreso button {
+    background-color: #0d1722;
+    /* Fondo azul oscuro */
+    color: #fff;
+    /* Texto blanco */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ingreso input[type="submit"]:hover,
+.ingreso button:hover {
+    background-color: #052d4f;
+    /* Cambia de color al pasar el ratón */
+}
+.ingreso button{
+    text-align: center;
+    width: 66%;
+    margin-bottom: 10px;
+}
+.ingreso button a{
+    color: #fff;
+}
+
+
+.mensaje_error {
+    color: rgb(228, 45, 45);
+    text-align: center;
+    font-size: 10px;
+}
+
+/* Media query para pantallas de 768px o menos (tablets y móviles en modo horizontal) */
+@media (max-width: 768px) {
+    .header-inicio {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .header-inicio img {
+        height: 50px;
+    }
+
+    .ingreso {
+        width: 90%;
+        max-width: none;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .ingreso h1 {
+        font-size: 1.5rem;
+    }
+
+    .ingreso input[type="submit"],
+    .ingreso button {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.875rem;
+    }
+
+    .mensaje_error {
+        font-size: 0.875rem;
+    }
+}
+
+/* Media query para pantallas de 480px o menos (móviles en modo vertical) */
+@media (max-width: 480px) {
+    .header-inicio {
+        padding: 0.5rem;
+        height: auto;
+    }
+
+    .header-inicio img {
+        height: 40px;
+    }
+
+    .ingreso {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+
+    .ingreso h1 {
+        font-size: 1.25rem;
+    }
+
+    .ingreso input[type="submit"],
+    .ingreso button {
+        width: 100%;
+        padding: 6px;
+        font-size: 0.75rem;
+    }
+
+    .mensaje_error {
+        font-size: 0.75rem;
+    }
+}
+
+

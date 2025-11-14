@@ -1,0 +1,326 @@
+/*--- Estilos NAV ---*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #0d1723;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    color: #89d6ff;
+}
+
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+.header .logo img:hover {
+    transform: scale(1.07);
+}
+
+.header nav {
+    list-style: none;
+}
+
+.header nav li {
+    display: inline-block;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+.header nav li:hover {
+    transform: scale(1.1);
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 700;
+    color: #89d6ff;
+}
+
+.carrito {
+    color: #89d6ff;
+}
+
+.ingreso {
+    transition: 0.3s;
+}
+
+.ingreso .registrar {
+    color: #89d6ff;
+}
+
+.ingreso:hover {
+    transform: scale(1.1);
+}
+
+.header .ingreso button {
+    font-weight: 700;
+    padding: 9px 25px;
+    color: #89d6ff;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .ingreso button:hover {
+    background-color: #ffffff;
+    transform: scale(1);
+}
+/*--- FIN estilos NAV ---*/
+
+
+.administrador_titulo {
+    text-align: center;
+    color: rgba(24, 129, 129, 0.986);
+    font-size: 30px;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 5px;
+}
+/*---NUEVO PROVEEDOR---*/
+.proveedor {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5px;
+    /*background-color: #1f1818;*/
+}
+h4 {
+    text-align: center;
+}
+.proveedor form[action="./nuevo_proveedorBD.php"]{
+    display: flex;
+    flex-direction: column;
+}
+.proveedor form[action="./nuevo_proveedorBD.php"] .btn_nuevo_proveedor{
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+}
+/*---NUEVA MARCA---*/
+.marca {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5px;
+    /*background-color: #1f1818;*/
+}
+
+.marca h4{
+    text-align: center;
+}
+
+.marca form[action="./nueva_marcaBD.php"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.marca form[action="./nueva_marcaBD.php"] .btn_nuevo_proveedor {
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+/*---NUEVA PRENDA---*/
+.producto {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5px;
+}
+form[action="nuevo_productoBD.php"] input[name="descripcion"] {
+    width: 100px;
+    height: 100px;
+}
+
+form[action="./nuevo_productoBD.php"] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+form input[type="submit"] {
+    margin-bottom: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/*-----Usuarios y pedidos-----*/
+
+.usuarios_pedidos {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 90%;
+    overflow-x: auto;
+}
+
+/* Estilos para la tabla */
+.usuarios_pedidos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilos para las cabeceras de la tabla */
+.usuarios_pedidos th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Estilos para las celdas de la tabla */
+.usuarios_pedidos td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para las filas alternadas */
+.usuarios_pedidos tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para las filas al pasar el cursor por encima */
+.usuarios_pedidos tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilo para el texto dentro de la tabla */
+.usuarios_pedidos td,
+.usuarios_pedidos th {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/*----- Editar_Producto -----*/
+
+.editar__prenda form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.subir__btn {
+    background: #89d6ff;
+}
+.subir__btn:hover{
+    background: #89d6fff5;
+    padding: 0.1rem;
+    border-radius: 1rem;
+}
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem 2%;
+    }
+
+    .header nav li {
+        display: block;
+        padding: 0.625rem 0;
+    }
+
+    .header .logo img {
+        height: 3.125rem;
+    }
+
+    .productos,
+    .proveedor,
+    .marca,
+    .producto {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .proveedor,
+    .marca,
+    .producto {
+        width: 100%;
+    }
+
+    form[action="nuevo_productoBD.php"] input[name="descripcion"] {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .header {
+        padding: 0.5rem 5%;
+    }
+
+    .header nav li {
+        padding: 0 1.875rem;
+    }
+
+    .productos,
+    .proveedor,
+    .marca,
+    .producto {
+        width: 100%;
+        margin-left: 0.3125rem;
+    }
+
+    .proveedor,
+    .marca,
+    .producto {
+        width: 100%;
+    }
+
+    form[action="nuevo_productoBD.php"] input[name="descripcion"] {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 769px) {
+    .header {
+        padding: 0.5rem 10%;
+    }
+
+    .header nav li {
+        padding: 0 2rem;
+    }
+
+    .proveedor,
+    .marca,
+    .producto {
+        width: 50%;
+    }
+}
